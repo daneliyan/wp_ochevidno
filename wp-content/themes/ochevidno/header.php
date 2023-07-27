@@ -2,15 +2,15 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Страница не найдена</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Главная</title>
 
-  <!-- favicons -->
+	<!-- favicons -->
 <link rel="apple-touch-icon" sizes="57x57" href="img/favicon.svg">
 <link rel="apple-touch-icon" sizes="60x60" href="img/favicon.svg">
 <link rel="apple-touch-icon" sizes="72x72" href="img/favicon.svg">
-<link rel="apple-touch-icon" sizes="76x76" href="img/favicon/favicon/favicon.svg">
+<link rel="apple-touch-icon" sizes="76x76" href="img/favicon.svg">
 <link rel="apple-touch-icon" sizes="114x114" href="img/favicon.svg">
 <link rel="apple-touch-icon" sizes="120x120" href="img/favicon.svg">
 <link rel="apple-touch-icon" sizes="144x144" href="img/favicon.svg">
@@ -32,9 +32,9 @@
 <link href="css/style.min.css" type="text/css" rel="stylesheet">
 </head>
 
-<body class="error404">
+<body <?php body_class(); ?>>
 
-  <!-- header desktop -->
+<!-- header desktop -->
 <header class="header header-desktop">
 	<nav class="nav container">
 		<a href="#" class="custom-logo-link">
@@ -119,83 +119,4 @@
 	</nav>
 </header>
 
-  <main>
-
-    <!-- breadcrumbs -->
-<div class="container">
-  <div class="kama_breadcrumbs">
-    <span><a href="#"><span>Главная</span></a></span>
-    <span class="kb_sep">/</span>
-    <span class="kb_title">Страница не найдена</span>
-  </div>
-</div>
-
-<section>
-  <div class="container">
-    <div class="default-wrapper">
-      <div class="decor-title">404</div>
-      <h1 class="section-title">Извините, но такой страницы не&nbsp;существует</h1>
-      <a href="#" class="button btn-w">Вернуться на главную</a>
-    </div>
-  </div>
-</section>
-
-  </main>
-
-  <!--------Footer--------->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-container">
-      <div class="col">
-        <a href="#" class="custom-logo-link">
-          <img src="img/logo.svg" alt="custom-logo">
-        </a>
-        <ul class="footer-menu">
-          <li><a href="#">Пользовательское соглашение</a></li>
-          <li><a href="#">Правила сообщества</a></li>
-          <li><a href="#">Политика обработки персональных данных</a></li>
-        </ul>
-      </div>
-
-      <div class="col">
-        <div class="search-label">
-          <input class="search-input" type="type" placeholder="Поиск" />
-          <button class="btn-reset search-btn"><i class="icomoon icon-magnifer"></i></button>
-        </div>
-        <div class="footer-group">
-          <div class="footer-links">
-            <a href="mailto:#" class="button btn-w">Реклама</a>
-            <a href="#" class="button btn-v">Контакты</a>
-          </div>
-          <div class="footer-socials">
-            <a href="#" target="_blank" class="btn-reset social-btn">
-              <i class="icomoon icon-vk"></i>
-            </a>
-            <a href="#" target="_blank" class="btn-reset social-btn">
-              <i class="icomoon icon-telegram"></i>
-            </a>
-            <a href="#" target="_blank" class="btn-reset social-btn">
-              <i class="icomoon icon-whatsapp"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copy">
-      <div class="number">18+</div>
-      <p class="text">© 1999 - 2023 Очевидно <span>Использование любых материалов сайта без согласования с администрацией запрещено</span></p>
-    </div>
-  </div>
-</footer>
-
-  
-
-  <!-- Script-->
-<script src="js/jquery-3.4.1.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/jquery.fancybox.min.js"></script>
-<script src="js/app.min.js"></script>
-
-</body>
-
-</html>
+	<main>
