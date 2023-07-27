@@ -1,14 +1,12 @@
 
 	</main>
 
-	<!--------Footer--------->
+<!--------Footer--------->
 <footer class="footer">
   <div class="container">
     <div class="footer-container">
       <div class="col">
-        <a href="#" class="custom-logo-link">
-          <img src="img/logo.svg" alt="custom-logo">
-        </a>
+        <?php if( $logo = get_custom_logo() ){ echo $logo; } ?>
         <ul class="footer-menu">
           <li><a href="#">Пользовательское соглашение</a></li>
           <li><a href="#">Правила сообщества</a></li>
@@ -49,11 +47,8 @@
 
 	
 
-	<!-- Script-->
-<script src="js/jquery-3.4.1.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/jquery.fancybox.min.js"></script>
-<script src="js/app.min.js"></script>
+<!-- Script-->
+<?php wp_footer(); ?>
 
 </body>
 
