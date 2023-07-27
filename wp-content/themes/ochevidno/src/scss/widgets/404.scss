@@ -1,0 +1,72 @@
+.error404 {
+  .default-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 44px;
+    padding-bottom: 60px;
+  }
+  .decor-title {
+    position: relative;
+    font-family: var(--font-roboto);
+    text-align: center;
+    font-size: 330px;
+    font-weight: 900;
+    line-height: 100%;
+    color: #6E42ED;
+    &::before {
+      content: '404';
+      position: absolute;
+      left: -10px;
+      top: -10px;
+      font-family: var(--font-roboto);
+      text-align: center;
+      font-size: 330px;
+      font-weight: 900;
+      line-height: 100%;
+      color: transparent;
+      -webkit-text-stroke: 2px #6E42ED;
+    }
+  }
+  .section-title {
+    max-width: 400px;
+    text-align: center;
+  }
+  .btn-w {
+    margin-top: 8px;
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .error404 {
+    .decor-title {
+      font-size: 220px;
+      &::before {
+        font-size: 220px;
+        left: -7px;
+        top: -7px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .error404 {
+    .decor-title {
+      font-size: 110px;
+      &::before {
+        font-size: 110px;
+        left: -3px;
+        top: -4px;
+      }
+    }
+    .section-title {
+      font-size: 20px;
+    }
+    .btn-w {
+      width: 100%;
+    }
+  }
+}

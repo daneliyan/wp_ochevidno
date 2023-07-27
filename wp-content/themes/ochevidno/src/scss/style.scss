@@ -1,0 +1,187 @@
+/***** FONTS *****/
+@import "fonts";
+
+/***** GENERAL ELEMENTS *****/
+:root {
+  // base
+  --font-family: 'Rubik', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
+
+  --content-width: 1320px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --white-color: #ffffff;
+  --black-color: #35313F;
+  // --lightBlack-color: #212121;
+
+  --font-color: #35313F;
+
+  --green-color: #8BD27C;
+  --red-color: #ED426B;
+  --blue-color: #3B66FF;
+  --turquoise-color: #1DC4C4;
+  --pink-color: #B913C8;
+  --violet-color: #6E42ED;
+  --yellow-color: #F6D732;
+
+  --grey-color: #F3F3F3;
+  --darkGrey-color: #A8A8A8;
+
+  --card-bg: #ffffff;
+}
+
+body.dark-theme {
+  background: #25212F;
+  // colors
+  --font-color: #ffffff;
+  --card-bg: #25212F;
+}
+
+/***** Mixins *****/
+@mixin list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/***** BLOCKS GLOBAL *****/
+@import "general";
+@import "blocks/buttons";
+@import "blocks/title";
+@import "blocks/card";
+
+
+/***** COMPONENTS GLOBAL *****/
+@import "blocks/header";
+@import "blocks/footer";
+@import "blocks/breadcrumbs";
+@import "blocks/pagination";
+@import "blocks/tags";
+// @import "blocks/fancybox";
+@import "blocks/carousel";
+@import "blocks/article";
+@import "blocks/form";
+// @import "blocks/modal";
+
+/***** SECTIONS GLOBAL (Widgets) *****/
+@import "widgets/aside";
+@import "widgets/404";
+@import "widgets/contacts";
+@import "widgets/archive";
+@import "widgets/dark-theme";
+
+/***** Page (article) *****/
+// @import "page/content";
+
+
+/***** ICONS *****/
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-next:before {
+  content: "\e91b";
+}
+.icon-play:before {
+  content: "\e91c";
+}
+.icon-prev:before {
+  content: "\e91d";
+}
+.icon-share:before {
+  content: "\e91e";
+}
+.icon-heart-outline:before {
+  content: "\e917";
+}
+.icon-star:before {
+  content: "\e918";
+}
+.icon-star-solid:before {
+  content: "\e919";
+}
+.icon-viber:before {
+  content: "\e91a";
+}
+.icon-articles:before {
+  content: "\e900";
+}
+.icon-best:before {
+  content: "\e901";
+}
+.icon-blogs:before {
+  content: "\e902";
+}
+.icon-calendar:before {
+  content: "\e903";
+}
+.icon-check:before {
+  content: "\e904";
+}
+.icon-chevron:before {
+  content: "\e905";
+}
+.icon-comment:before {
+  content: "\e906";
+}
+.icon-eye:before {
+  content: "\e907";
+}
+.icon-heart:before {
+  content: "\e908";
+}
+.icon-heart-solid:before {
+  content: "\e909";
+}
+.icon-magnifer:before {
+  content: "\e90a";
+}
+.icon-menu:before {
+  content: "\e90b";
+}
+.icon-moon:before {
+  content: "\e90c";
+}
+.icon-news:before {
+  content: "\e90d";
+}
+.icon-plus:before {
+  content: "\e90e";
+}
+.icon-remove:before {
+  content: "\e90f";
+}
+.icon-reviews:before {
+  content: "\e910";
+}
+.icon-sun:before {
+  content: "\e911";
+}
+.icon-telegram:before {
+  content: "\e912";
+}
+.icon-testimonials:before {
+  content: "\e913";
+}
+.icon-user:before {
+  content: "\e914";
+}
+.icon-vk:before {
+  content: "\e915";
+}
+.icon-whatsapp:before {
+  content: "\e916";
+}

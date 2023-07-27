@@ -1,0 +1,54 @@
+.dark-theme .default-wrapper,
+.dark-theme .widget {
+  background: #35313F;
+}
+.dark-theme {
+  &.error404 .button.btn-w {
+    background-color: var(--violet-color);
+  }
+  .options li {
+    color: rgba(255, 255, 255, 0.50);
+  }
+  input,
+  textarea {
+    color: var(--white-color);
+    background: #25212F;
+    &::placeholder {
+      color: #A8A8A8;
+    }
+  }
+  .post-per-page {
+    >span,
+    &-number {
+      color: #ffffff;
+    }
+  }
+  /*-----pagination-----*/
+  .nav-links {
+    .page-numbers {
+      color: var(--font-color);
+      background-color: #25212F;
+      &.disabled {
+        background-color: #25212F !important;
+      }
+    }
+    .current,
+    a.page-numbers:hover  {
+      color: #35313F;
+      background-color: var(--white-color);
+    }
+    a.page-numbers.prev,
+    a.page-numbers.next {
+      &:hover {
+        color: var(--violet-color);
+        background-color: #25212F;
+      }
+    }
+  }
+  .post {
+    background-color: #35313F;
+  }
+  .comment {
+    background-color: #25212F;
+  }
+}

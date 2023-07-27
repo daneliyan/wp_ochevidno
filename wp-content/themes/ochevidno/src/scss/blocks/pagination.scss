@@ -1,0 +1,77 @@
+/*-----pagination-----*/
+.pagination {
+	width: 100%;
+	margin-top: 14px;
+}
+.screen-reader-text{
+	display: none;
+}
+.nav-links {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	position: relative;
+	padding: 0 35px;
+	.page-numbers {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		margin: 5px 5px 0 5px;
+		width: 30px;
+		height: 30px;
+		color: var(--font-color);
+		border-radius: 100%;
+		background-color: var(--white-color);
+		transition: color 0.3s ease-in, background-color 0.3s ease-in;
+		&.disabled {
+			color: #AFAFAF !important;
+			background-color: var(--white-color) !important;
+			cursor: auto;
+		}
+	}
+	.current {
+		color: var(--white-color);
+		background-color: var(--font-color);
+	}
+	a.page-numbers {
+		&:hover {
+			color: var(--white-color);
+			background-color: var(--font-color);
+		}
+	}
+	a.page-numbers.prev,
+	a.page-numbers.next {
+		&:hover {
+			color: var(--violet-color);
+			background-color: var(--white-color);
+		}
+	}
+
+	.prev {
+		position: absolute;
+		left: 0;
+	}
+	.next {
+		position: absolute;
+		right: 0;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.nav-links .page-numbers {
+		&:nth-child(6) {
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width: 359px) {
+	.nav-links .page-numbers {
+		&:nth-child(5) {
+			display: none;
+		}
+	}
+}
