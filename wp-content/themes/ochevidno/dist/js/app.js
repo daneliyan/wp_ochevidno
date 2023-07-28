@@ -1,4 +1,61 @@
 $(document).ready(function () {
+	// ----- преобразуем картинку в встроеный svg------
+	function svg() {
+		$('img[src$=".svg"]').each(function () {
+			var $img = $(this);
+			var imgURL = $img.attr('src');
+			var attributes = $img.prop('attributes');
+			if ($img.hasClass('svg')) {
+				$.get(imgURL, function (data) {
+					var $svg = jQuery(data).find('svg');
+					$svg = $svg.removeAttr('xmlns:a');
+					$.each(attributes, function () {
+						$svg.attr(this.name, this.value);
+					});
+					$img.removeClass('svg').replaceWith($svg);
+				}, 'xml');
+			}
+		});
+	}
+	svg();
+
+
+	//--------------- loadmore--------------
+
+	var button = $('#loadmore span'),
+		paged = button.attr("data-paged"),
+		maxPages = button.attr("data-max-pages"),
+		action = button.attr("data-action"),
+		term_id = button.attr("data-term"),
+		loadmore = $('#loadmore');
+
+	button.click(function (event) {
+		event.preventDefault();
+
+
+		$.ajax({
+			type: 'POST',
+			url: location.origin + '/wp-admin/admin-ajax.php',
+			data: {
+				paged: paged,
+				action: action,
+				term_id: term_id
+			},
+			beforeSend: function (xhr) {
+
+			},
+			success: function (data) {
+				paged++;
+				button.parent().prev('#posts').append(data);
+				if (paged == maxPages) {
+					button.remove();
+				}
+
+			}
+		});
+	});
+
+
 
 	/*=== DARK LIGHT THEME ==================================*/
 	const themeButton1 = document.getElementById('theme-button1')

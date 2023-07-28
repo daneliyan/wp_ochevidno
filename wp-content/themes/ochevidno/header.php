@@ -36,14 +36,16 @@
 	<nav class="nav container">
     <?php if( $logo = get_custom_logo() ){ echo $logo; } ?>
 		<div class="nav-menu">
-			<ul class="nav-list">
-				<li><a href="#">Новости</a></li>
-				<li><a href="#">Статьи</a></li>
-				<li><a href="#">Блоги</a></li>
-				<li><a href="#">Обзоры</a></li>
-				<li><a href="#">Отзывы</a></li>
-				<li><a href="#">Помощь</a></li>
-			</ul>
+      <?php
+        wp_nav_menu( [
+          'theme_location'  => 'header',
+          'container'       => '',
+          'menu_class'      => 'nav-list',
+          'menu_id'         => false,
+          'echo'            => true,
+          'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+        ] );
+      ?>
 		</div>
 		<div class="header-bar">
 			<div class="search-label search-second" id="searchBarLabel">
